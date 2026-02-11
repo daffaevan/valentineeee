@@ -1,23 +1,33 @@
  // Reasons database
  const reasons = [
     { 
-        text: "You’re such a kind and wonderful person, and I feel lucky to share such a good bond with you. 💖", 
+        text: "Happy Valentine Mbull, Tidaa Terasa Yaa Kitaa Sudahh Kenal Selama Inii💖", 
         emoji: "🌟",
         gif: "gif1.gif"
     },
     { 
-        text: "May your day be filled with love, laughter, and endless joy. 🌸 ", 
+        text: "Dari Awalnya Yang Cuma Bareng Pas Rapat, Gak Tau Kenapa Jadii Nyamann Sama Mbull. 🌸 ", 
         emoji: "💗",
         gif: "gif2.gif"
     },
     { 
-        text: "Wishing you success, happiness, and everything your heart desires. ✨ ", 
+        text: "Aku Tuu Sayanggg Bangett Sama Mbulll, tapiii akuu tidaa beranii ucapinn ituu ke mbull. ✨ ", 
         emoji: "💕",
         gif: "gif1.gif"
     },
     { 
-        text: "Stay the amazing girl you are—always spreading positivity around. Have the happiest year ahead! 🥳 ", 
-        emoji: "🌟",
+        text: "Karena Akuu Tauu Mbull Tida Boleh Pacaran Sama Mamaa, Kemarin Pas Bu Riska Ngasih Tau Chat Mama, Akuu Sedih Bingung Harus Apaa. Aku Ada Niat Buat Jauhin Mbul, Tapii Akuu Tidaa Bisaa, Aku Juga Takut Kalau Mbull Dimarahin Mama Kalau Ketauan. ❤ ", 
+        emoji: "💕",
+        gif: "gif2.gif"
+    },
+    { 
+        text: "Maafinn Akuu Yaa Kalo Sering Buat Mbull Marahh, Terus Sering Foto Mbull Jugaa. Nantii Kamuu Hapus Sajaa Foto Foto Yang Mauu Kamuu Hapuss Yaaa Mbulll. 💖 ", 
+        emoji: "💕",
+        gif: "gif2.gif"
+    },
+    { 
+        text: "Mungkinn Kita Hanya Bisa Sebatas Teman Pulang Bareng Sajaa, Dan Aku Berusaha Menurunkan Espektasi Akuu Demii Kebaikann Mbulll. Terimakasihh Yaa Mbull Untuk Selama Inii, Karena Kamu Aku Merasa Punya Kehidupan Baruu. I LOVE U ASSYFA. 💖 ", 
+        emoji: "💕",
         gif: "gif2.gif"
     }
 ];

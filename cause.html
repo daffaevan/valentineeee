@@ -1,40 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why You're My Best Friend! 💖</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <link rel="stylesheet" href="./cause.css">
-    <style>
-       
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Valentine MBULLL!!!💖</title>
+
+<link rel="icon" href="heart.png" type="image/png">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<style>
+body {
+    font-family: 'Quicksand', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(-45deg,#ffe6e6,#e6e6ff,#ffebf5);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    overflow-x: hidden;
+    padding: 2rem;
+}
+
+@keyframes gradientBG{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 3rem;
+    color: #ff69b4;
+    margin-bottom: 2rem;
+}
+
+.reason-card {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+    background: rgba(255,255,255,0.9);
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.reason-text {
+    font-size: 1.1rem;
+}
+
+.shuffle-button {
+    cursor: pointer;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(45deg,#ff69b4,#ff99cc);
+    color: white;
+    margin-top: 1rem;
+}
+
+.floating {
+    position: fixed;
+    pointer-events: none;
+    font-size: 20px;
+    z-index: 999;
+}
+</style>
 </head>
 <body>
-    <div class="custom-cursor">
-        <svg viewBox="0 0 24 24">
-            <path fill="#ff69b4" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-        </svg>
-    </div>
 
-    <div class="container">
-        <h1>Happy Birthday Priyaa 💖</h1>
-        
-        <div id="reasons-container"></div>
-        
-        <button class="shuffle-button">Click Here... 💕</button>
-        <div class="reason-counter"></div>
+<audio id="bg-music" autoplay loop muted playsinline>
+    <source src="audio1.mp3" type="audio/mpeg">
+</audio>
 
-        <div class="ending-section">
-            <div class="teddy-hug">
-                <img src="./d1.jpg" alt="Teddy Hug">
-            </div>
-            <div class="ending-text">You're the BESTEST ! 💖</div>
-        </div>
-    </div>
+<div class="container">
+    <h1>Happy Valentine Mbulll💖</h1>
+    <div id="reasons-container"></div>
+    <button class="shuffle-button">Click Here... 💕</button>
+    <div class="reason-counter"></div>
+</div>
 
-    <script src="cause.js">
-       
-    </script>
+<script>
+// === MUSIC AUTOPLAY UNMUTE ===
+const music = document.getElementById('bg-music');
+music.volume = 0.4;
+window.addEventListener('load', ()=>{
+    music.muted = false;
+    const playAttempt = music.play();
+    if(playAttempt!==undefined){
+        playAttempt.catch(()=>{document.addEventListener('click',()=>{music.muted=false; music.play();},{once:true})});
+    }
+});
+
+// === REASONS DATABASE ===
+const reasons = [
+    { text:"Happy Valentine Mbull, Tidaa Terasa Yaa Kitaa Sudahh Kenal Selama Inii💖", emoji:"🌟", gif:"gif1.gif" },
+    { text:"Dari Awalnya Yang Cuma Pulang Bareng Pas Rapat, Gak Tau Kenapa Jadii Nyamann Sama Mbull. 🌸", emoji:"💗", gif:"gif2.gif" },
+    { text:"Aku Tuu Sayanggg Bangett Sama Mbulll, tapiii akuu tidaa beranii ucapinn ituu ke mbull. ✨", emoji:"💕", gif:"gif1.gif" },
+    { text:"Karena Akuu Tauu Mbull Tida Boleh Pacaran Sama Mamaa, Kemarin Pas Bu Riska Ngasih Tau Chat Mama, Akuu Sedih Bingung Harus Apaa. Aku Ada Niat Buat Jauhin Mbul, Tapii Akuu Tidaa Bisaa, Aku Juga Takut Kalau Mbull Dimarahin Mama Kalau Ketauan. ❤", emoji:"💕", gif:"gif2.gif" },
+    { text:"Maafinn Akuu Yaa Kalo Sering Buat Mbull Marahh, Terus Sering Foto Mbull Jugaa. Nantii Kamuu Hapus Sajaa Foto Foto Yang Mauu Kamuu Hapuss Yaaa Mbulll. 💖", emoji:"💕", gif:"gif2.gif" },
+    { text:"Mungkinn Kita Hanya Bisa Sebatas Teman Pulang Bareng Sajaa, Dan Aku Berusaha Menurunkan Espektasi Akuu Demii Kebaikann Mbulll. Terimakasihh Yaa Mbull Untuk Selama Inii, Karena Kamu Aku Merasa Punya Kehidupan Baruu.                                                                    I LOVE U ASSYFA. 💖", emoji:"💕", gif:"gif2.gif" }
+];
+
+let currentReasonIndex = 0;
+let reasonsContainer = document.getElementById('reasons-container');
+let shuffleButton = document.querySelector('.shuffle-button');
+let reasonCounter = document.querySelector('.reason-counter');
+let isTransitioning = false;
+
+// === FLOATING ELEMENTS ===
+function createFloatingElement(){
+    const elements = ['🌸','✨','💖','🦋','⭐'];
+    const el = document.createElement('div');
+    el.className='floating';
+    el.textContent=elements[Math.floor(Math.random()*elements.length)];
+    el.style.left=Math.random()*window.innerWidth+'px';
+    el.style.top=Math.random()*window.innerHeight+'px';
+    el.style.fontSize=(Math.random()*20+15)+'px';
+    document.body.appendChild(el);
+    gsap.to(el,{y:-500,duration:Math.random()*10+8,opacity:0,onComplete:()=>el.remove()});
+}
+
+// === DISPLAY 1 REASON PER CLICK ===
+shuffleButton.addEventListener('click',()=>{
+    if(isTransitioning) return;
+    isTransitioning=true;
+
+    if(currentReasonIndex<reasons.length){
+        const reason = reasons[currentReasonIndex];
+        const card = document.createElement('div');
+        card.className='reason-card';
+        const text = document.createElement('div');
+        text.className='reason-text';
+        text.innerHTML=`${reason.emoji} ${reason.text}`;
+        card.appendChild(text);
+        reasonsContainer.appendChild(card);
+
+        // Animasi fade-in + slide + scale
+        gsap.to(card,{opacity:1,y:0,scale:1,duration:0.8,ease:"back.out(1.7)"});
+
+        reasonCounter.textContent=`Reason ${currentReasonIndex+1} of ${reasons.length}`;
+        createFloatingElement();
+
+        currentReasonIndex++;
+
+        // transform button jika semua muncul
+        if(currentReasonIndex===reasons.length){
+            gsap.to(shuffleButton,{scale:1.1,duration:0.5,ease:"elastic.out",onComplete:()=>{
+                shuffleButton.textContent="Enter Our Storylane 💫";
+                shuffleButton.classList.add('story-mode');
+                shuffleButton.addEventListener('click',()=>{
+                    gsap.to('body',{opacity:0,duration:1,onComplete:()=>window.location.href='last.html'});
+                });
+            }});
+        }
+
+        setTimeout(()=>{isTransitioning=false;},800);
+    }
+});
+
+// initial floating elements
+setInterval(createFloatingElement,2500);
+
+</script>
 </body>
 </html>
+    

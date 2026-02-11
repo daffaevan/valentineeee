@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Beautiful Memories ✨</title>
+    <title>LOVEE UU MBULL✨</title>
+     <link rel="icon" href="heart.png" type="image/png"> 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@300;400;500;600&display=swap');
 
@@ -19,7 +20,7 @@
             background: linear-gradient(135deg,
                     #ffd1dc 0%,
                     #e6e6fa 25%,
-                    #ffefd5 50%,
+                    #f5c7e5 50%,
                     #e6e6fa 75%,
                     #ffd1dc 100%);
             background-size: 400% 400%;
@@ -170,7 +171,7 @@
         }
 
         .memory-card {
-            background: rgba(255, 255, 255, 0.9);
+            background: #FEE4E9;
             border-radius: 20px;
             padding: 1.5rem;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -356,10 +357,38 @@
                 font-size: 2.5rem;
             }
         }
+    
     </style>
 </head>
 
 <body>
+    <!-- 🎵 BACKGROUND MUSIC -->
+<audio id="bg-music" autoplay loop muted playsinline>
+    <source src="audio2.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio.
+</audio>
+
+<script>
+    const music = document.getElementById('bg-music');
+    music.volume = 0.4; // atur volume 40%
+
+    // Coba mainkan musik saat halaman load
+    window.addEventListener('load', () => {
+        music.muted = false;
+        const playAttempt = music.play();
+
+        if (playAttempt !== undefined) {
+            playAttempt.catch(() => {
+                // fallback: nyalakan musik saat klik pertama
+                document.addEventListener('click', () => {
+                    music.muted = false;
+                    music.play();
+                }, { once: true });
+            });
+        }
+    });
+</script>
+
     <div class="magic-sparkles"></div>
     <div class="floating-hearts">
         <!-- Hearts will be generated via CSS -->
@@ -367,31 +396,46 @@
         <div class="heart" style="--float-duration: 8s; --delay: 1s; --translate-x: -30px;">💖</div>
         <div class="heart" style="--float-duration: 7s; --delay: 2s; --translate-x: 40px;">💗</div>
         <div class="heart" style="--float-duration: 9s; --delay: 3s; --translate-x: -20px;">💓</div>
-        <div class="heart" style="--float-duration: 5s; --delay: 4s; --translate-x: 30px;">💕</div>
+        <div class="heart" style="--float-duration: 5   s; --delay: 4s; --translate-x: 30px;">💕</div>
     </div>
+<div class="love-random-container"></div>
 
     <section class="welcome">
         <h1>Our Beautiful Moments Together</h1>
-        <p>Every moment spent with you has been magical. Let's cherish these precious memories ...</p>
+        <p>Every moment spent with you has been magical...</p>
     </section>
 
     <div class="memory-container">
         <div class="memory-card">
-            <img src="./d1.jpg" alt="First Date" class="memory-img">
-            <div class="memory-date">Her Smile Says It All</div>
-            <div class="memory-caption">You’re truly one of the sweetest girls I know, and I feel lucky to have a sis
-                like you.❤️</div>
+            <img src="foto1.jpeg" alt="First Date" class="memory-img">
+            <div class="memory-date">Your Smile Is Really Beautiful</div>
+            <div class="memory-caption">You’re truly one of the sweetest girls I know   .❤️</div>
         </div>
         <div class="memory-card">
-            <img src="./d2.jpg" alt="Beach Day" class="memory-img">
+            <img src="foto2.jpeg" alt="Beach Day" class="memory-img">
             <div class="memory-date">Together Vibes</div>
             <div class="memory-caption">May your journey ahead be filled with happiness, success, and endless
                 smiles.😊💕</div>
         </div>
         <div class="memory-card">
-            <img src="./d3.jpg" alt="Movie Night" class="memory-img">
+            <img src="foto3.jpeg" alt="Movie Night" class="memory-img">
             <div class="memory-date">Pretty Soul</div>
             <div class="memory-caption">Keep being the amazing person you are—you make every moment brighter.🌸💖</div>
+        </div>
+          <div class="memory-card">
+            <img src="foto4.jpeg" alt="Movie Night" class="memory-img">
+            <div class="memory-date">My Sunshine</div>
+            <div class="memory-caption">Every moment with you feels like my favorite memory.🌸💖</div>
+        </div>
+          <div class="memory-card">
+            <img src="foto5.jpeg" alt="Movie Night" class="memory-img">
+            <div class="memory-date">Forever Us</div>
+            <div class="memory-caption">Through every laugh and every story, I choose you..🌸💖</div>
+        </div>
+          <div class="memory-card">
+            <img src="foto6.jpeg" alt="Movie Night" class="memory-img">
+            <div class="memory-date">My Happiness</div>
+            <div class="memory-caption">If happiness had a face, it would look just like you.🌸💖</div>
         </div>
 
     </div>
@@ -400,9 +444,9 @@
         <h2>Thank You for the Memories</h2>
         <p>Every laugh, every chat, and every moment we’ve shared has been truly special.💫<br>
             I’m so grateful for the bond we have, and for the positivity you always bring into my life.<br>
-            On your birthday, I just wish for endless happiness, love, and success to come your way.🌸</p>
+        I just wish for endless happiness, love, and success to come your way.🌸</p>
         <p>You deserve all the joy in the world—keep shining and spreading your beautiful energy.✨</p>
-        <a href="#" class="goodbye-btn">Until We Meet Again 💝</a>
+        <a href="#" class="goodbye-btn">I Love You Assyfa 💝</a>
     </section>
 </body>
 
