@@ -16,7 +16,7 @@
         gif: "gif1.gif"
     },
     { 
-        text: "Karena Akuu Tauu Mbull Tida Boleh Pacaran Sama Mamaa, Kemarin Pas Bu Riska Ngasih Tau Chat Mama, Akuu Sedih Bingung Harus Apaa. Aku Ada Niat Buat Jauhin Mbul, Tapii Akuu Tidaa Bisaa, Aku Juga Takut Kalau Mbull Dimarahin Mama Kalau Ketauan. ❤ ", 
+        text: "Karena Akuu Tauu Mbull Tidaa Boleh Pacaran Sama Mamaa,  Lebih Baik Aku Diam Dari Pada Aku Harus Kehilangan Mbull. Aku Ada Niat Buat Jauhin Mbul, Tapii Akuu Tidaa Bisaa, Aku Juga Takut Kalau Mbull Dimarahin Mama Kalau Ketauan. ❤ ", 
         emoji: "💕",
         gif: "gif2.gif"
     },
